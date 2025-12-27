@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Просмотр документа</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+    }
+
+    /* Header */
+    .header {
+      background-color: #fff;
+      border-bottom: 3px solid #f8eebd;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 25px;
+    }
+
+    .header img {
+      height: 75px; /* катталаштирилган логотип */
+    }
+
+    .menu {
+      font-size: 32px;
+      color: #007baf;
+      cursor: pointer;
+    }
+
+    /* Контейнер */
+    .container {
+      margin: 30px auto;
+      max-width: 480px;
+      background: #fff;
+      padding: 35px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    .alert {
+      background-color: #fff7e6;
+      border-left: 5px solid #f2b01e;
+      padding: 10px;
+      font-size: 15px;
+      color: #555;
+      text-align: left;
+      margin-bottom: 25px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      text-align: left;
+      margin-bottom: 8px;
+      color: #333;
+      font-size: 17px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 18px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      font-size: 19px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .hint {
+      font-size: 14px;
+      color: #0066cc;
+      margin-top: 15px;
+    }
+
+    /* Document Preview */
+    .document-preview {
+      margin-top: 40px;
+    }
+
+    .document-preview img {
+      width: 420px; /* катталаштирилган ҳужжат */
+      border-radius: 6px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <img src="headerlogo.png" alt="Header Logo">
+    <div class="menu">☰</div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="alert">
+      Пожалуйста, пройдите авторизацию, чтобы система определила вас.<br>
+      Если документ принадлежит вам, введения PIN-кода не требуется.
+    </div>
+
+    <form onsubmit="checkPIN(); return false;">
+      <label for="pin">ПИН код</label>
+      <input type="text" id="pin" maxlength="4" placeholder="Введите 4 цифры">
+      <button type="submit">Открыть</button>
+    </form>
+
+    <p class="hint">PIN-код размещается рядом с QR-кодом документа.</p>
+
+    <div class="document-preview">
+      <img src="doc-example.png" alt="Документ с QR">
+    </div>
+  </div>
+
+  <script>
+    function checkPIN() {
+      const correctPIN = "7696"; // ПИН код
+      const userPIN = document.getElementById("pin").value;
+      if (userPIN === correctPIN) {
+        window.location.href = "Справка об отсутствии зарегистрированного брака.pdf";
+      } else {
+        alert("Неверный PIN-код. Попробуйте снова.");
+      }
+    }
+  </script>
+</body>
+</html>
