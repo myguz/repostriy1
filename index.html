@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Справка об отсутствии зарегистрированного брака</title>
+  <style>
+    body {
+      margin: 0;
+      background: #fff;
+      font-family: Arial, sans-serif;
+      color: #222;
+      text-align: center;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      border-bottom: 1px solid #eee;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .brand img {
+      height: 34px;
+    }
+    .brand a {
+      text-decoration: none;
+      font-weight: 700;
+      color: #0078d7; /* moviy rang */
+      font-size: 20px;
+    }
+    .burger {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .burger span {
+      display: block;
+      width: 28px;
+      height: 3px;
+      background: #0078d7;
+      border-radius: 3px;
+    }
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 22px;
+      margin: 10px 0 20px;
+    }
+    img.certificate {
+      width: 100%;
+      max-width: 800px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .actions {
+      margin-top: 15px;
+    }
+    .btn {
+      background: #0078d7;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: 0.2s;
+      margin: 5px;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: #005fa3;
+    }
+    footer {
+      padding: 15px;
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="logo.png" alt="logo">
+      <a href="https://my.gov.uz" target="_blank">my.gov.uz</a>
+    </div>
+    <div class="burger"><span></span><span></span><span></span></div>
+  </header>
+
+  <main>
+    <h1>Справка об отсутствии зарегистрированного брака</h1>
+    <img src="Справка об отсутствии зарегистрированного брака.png" alt="Справка" class="certificate">
+
+    <div class="actions">
+      <a class="btn" href="Справка об отсутствии зарегистрированного брака.png" download>📥 Скачать справку</a>
+      <a class="btn" target="_blank" href="Справка об отсутствии зарегистрированного брака.png">🌐 Открыть в новой вкладке</a>
+    </div>
+  </main>
+
+  <footer>
+    © repostriy · Автоматический просмотр изображения справки.
+  </footer>
+</body>
+</html>
